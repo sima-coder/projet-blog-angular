@@ -1,0 +1,12 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': postLove > 0,
+                'list-group-item-danger': postLove < 0 }">
+  <p style="text-align: right; font-style: italic; color: dimgray;">{{ postCreation | date: 'short'}}</p>
+  <h3 [ngStyle]="{color: getColor()}">{{postTitle}}</h3>
+  <p [ngStyle]="{color: getColor()}">{{postContent}}</p>
+  <br/>
+  <button class="btn btn-success"(click)="onGetMoreLove()">Love it!</button>&nbsp;
+  <button class="btn btn-danger" (click)="onGetLessLove()">Don't love it!</button>&nbsp;
+  <a [routerLink]="postId">Détail post</a>
+  <button style="float: right;" class="btn btn-warning" (click)="onDeletePost()">Supprimer</button>
+</li>

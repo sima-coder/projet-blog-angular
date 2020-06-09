@@ -1,0 +1,9 @@
+<div class="row">
+  <div class="col-sm-8 col-sm-offset-2">
+    <h3>Titre: {{ title }}</h3>
+    <p>Date de création: {{ createdAt | date: 'short' }}</p>
+    <p>Contenu: {{ content}}</p>
+    <p>Note: {{ loveIts }}</p>
+    <a routerLink="/posts">Retour à la liste</a>
+  </div>
+</div>

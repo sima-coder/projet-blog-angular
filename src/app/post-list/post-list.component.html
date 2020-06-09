@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h2>Posts</h2>
+      <ul class="list-group">
+        <app-post-list-item *ngFor="let post of posts; let i=index"
+                            [postTitle]="post.title"
+                            [postContent]="post.content"
+                            [postLove]="post.loveIts"
+                            [postCreation]="post.createdAt"
+                            [postId]="post.id"
+                            [indexOfPost]="i"></app-post-list-item>
+      </ul>
+      <button class="btn btn-info" (click)="onSave()">Enregister dans BDD</button>&nbsp;
+      <button class="btn btn-info" (click)="onFetch()">Charger à partir de BDD</button>
+    </div>
+  </div>
+</div>
